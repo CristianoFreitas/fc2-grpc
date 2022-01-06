@@ -124,4 +124,4 @@ func (*UserService) AddUserStreamBoth(stream pb.UserService_AddUserStreamBothSer
 			log.Fatalf("Error sending stream to the client: %v", err)
 		}
 	}
-}
+} 
