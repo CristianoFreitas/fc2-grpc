@@ -21,8 +21,8 @@ func main() {
 	client := pb.NewUserServiceClient(connection)
 	// AddUser(client)
 	// AddUserVerbose(client)
-	// AddUsers(client)
-	AddUserStreamBoth(client)
+	AddUsers(client)
+	// AddUserStreamBoth(client)
 
 }
 
@@ -67,29 +67,29 @@ func AddUserVerbose(client pb.UserServiceClient) {
 func AddUsers(client pb.UserServiceClient) {
 	reqs := []*pb.User{
 		&pb.User{
-			Id:    "w1",
-			Name:  "Wesley",
-			Email: "wes@wes.com",
+			Id:    "C1",
+			Name:  "Cristiano",
+			Email: "crf@crf.com",
 		},
 		&pb.User{
-			Id:    "w2",
-			Name:  "Wesley 2",
-			Email: "wes2@wes.com",
+			Id:    "C2",
+			Name:  "Cristiano 2",
+			Email: "crf2@crf.com",
 		},
 		&pb.User{
-			Id:    "w3",
-			Name:  "Wesley 3",
-			Email: "wes3@wes.com",
+			Id:    "C3",
+			Name:  "Cristiano 3",
+			Email: "crf3@crf.com",
 		},
 		&pb.User{
-			Id:    "w4",
-			Name:  "Wesley 4",
-			Email: "wes4@wes.com",
+			Id:    "C4",
+			Name:  "Cristiano 4",
+			Email: "crf4@crf.com",
 		},
 		&pb.User{
-			Id:    "w5",
-			Name:  "Wesley 5",
-			Email: "wes5@wes.com",
+			Id:    "C5",
+			Name:  "Cristiano 5",
+			Email: "crf5@crf.com",
 		},
 	}
 
@@ -120,29 +120,29 @@ func AddUserStreamBoth(client pb.UserServiceClient) {
 
 	reqs := []*pb.User{
 		&pb.User{
-			Id:    "w1",
-			Name:  "Wesley",
-			Email: "wes@wes.com",
+			Id:    "C1",
+			Name:  "Cristiano",
+			Email: "crf@crf.com",
 		},
 		&pb.User{
-			Id:    "w2",
-			Name:  "Wesley 2",
-			Email: "wes2@wes.com",
+			Id:    "C2",
+			Name:  "Cristiano 2",
+			Email: "crf2@crf.com",
 		},
 		&pb.User{
-			Id:    "w3",
-			Name:  "Wesley 3",
-			Email: "wes3@wes.com",
+			Id:    "C3",
+			Name:  "Cristiano 3",
+			Email: "crf3@crf.com",
 		},
 		&pb.User{
-			Id:    "w4",
-			Name:  "Wesley 4",
-			Email: "wes4@wes.com",
+			Id:    "C4",
+			Name:  "Cristiano 4",
+			Email: "crf4@crf.com",
 		},
 		&pb.User{
-			Id:    "w5",
-			Name:  "Wesley 5",
-			Email: "wes5@wes.com",
+			Id:    "C5",
+			Name:  "Cristiano 5",
+			Email: "crf5@crf.com",
 		},
 	}
 
@@ -167,7 +167,7 @@ func AddUserStreamBoth(client pb.UserServiceClient) {
 				log.Fatalf("Error receiving data: %v", err)
 				break
 			}
-			fmt.Printf("Recebendo user %v com status: %v\n", res.GetUser().GetName(), res.GetStatus())
+			fmt.Printf("Receiving user %v com status: %v\n", res.GetUser().GetName(), res.GetStatus())
 		}
 		close(wait)
 	}()
